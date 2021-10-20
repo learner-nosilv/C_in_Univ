@@ -1,3 +1,42 @@
+/*
+*	Chapter4. Variable & Data type
+*		- 人 use [variable or address] → Com access [MEMORY → data]
+*		- variable vs CONSTANT ← Identifier of Value
+*		  variable > changeable > symbol
+*		  CONSTANT > Un_changeable > *literal* or symbol
+*		  int a = 1; ← variable = CONATANT;
+*		   #define NAME value		// 전역 preprocess
+*		   const int NAME = value;	// 지역 ♡ 자료형 지정가능
+*		★ literal constant's default data type : INT DOUBLE
+*			fix → 숫자접미사U(unsigned int), L(long), UL, F(float)
+*		- sizeof(datatype) byte
+*			정수 short2 int4 long4 longlong8 %d %ld
+*				오버플로우조심
+*			실수 float4 double8 longdouble8	%f %lf %e
+*				적은비트로 넓은범위의실수를 커버하는 부동소수점방식
+*				float32bit(부호1/23/지수8)약 유효숫자6
+*				double64bit(부호1/52/지수11)약 유효숫자16
+*				언더플로우:위가 짤림
+*			문자 char1 %c
+*				*ASCII* or UNI code
+*				정수:문자 1:1대응
+*				-128~-1 or 128~255 : 확장아스키코드
+				0~31 : 제어(커서이동or경고음or etc..)
+					알람/a 뒤/b 탭/t 개행/n 수직탭/v 폼피드/f 리턴/r
+				32~127: 문자
+*		- unsigned : 0 ~ (2^bit)-1  %u
+*		* int : ±21억
+*		- 정수 표현 : 2, 8, 10, 16진수
+*			2진수>입출력X
+*			*컴퓨터는 무조건 2진수switch, 음수:2의보수(bit반전+1)
+*			8진수>입력:0값 출력:%o
+*			10진수>그냥입력 %d, ld, lld u, lu, llu
+*			16진수>입력:0x값 출력:%x
+*			*16진수1자리=2진수4자리
+*
+* 
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -84,7 +123,8 @@ int main(void)
 	// 10. alarm and alarm
 	printf("\a\n");
 	printf("fire exprosion\n");
-	printf("\a\n");
+	printf("\a\n");		//안울려...
+
 
 
 	// 11. print it
