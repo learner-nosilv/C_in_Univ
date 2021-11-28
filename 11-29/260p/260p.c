@@ -1,21 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main(void) {
-	double x, y;
-	int quardrant;
-	printf("좌표(x, y): ");
-	scanf("%lf %lf", &x, &y);
+int main(void)
+{
+	char shape;
+	printf("문자를 입력하시오: ");
+	shape = getchar();
 
-	if (x * y == 0) quardrant = 0;
-	else if (x > 0 && y > 0) quardrant = 1;
-	else if (x < 0 && y < 0) quardrant = 3;
-	else if (x > 0) quardrant = 4;
-	else if (y > 0) quardrant = 2;
-	else printf("ERROR\n");
-
-	if (quardrant) printf("%d사분면\n", quardrant);
-	else printf("축 위에 있습니다.\n");
-
+	switch (shape) {
+		case('R'):
+		case('r'):
+			printf("Rectangle\n");
+			break;
+		case('T'):
+		case('t'):
+			printf("Triangle\n");
+			break;
+		case('C'):
+		case('c'):
+			printf("Circle\n");
+			break;
+		default:
+			printf("Unknown\n");
+			break;
+	}
 	return 0;
 }
