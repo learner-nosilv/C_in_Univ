@@ -41,5 +41,13 @@ int main(void) {
 	printf("\n");
 	printf("[%d X %d]\n", w, h);
 
+	// factorial.c
+	long long fact = 1;
+	printf("[Factorial] N ! : ");
+	scanf("%d", &n);
+
+	for (i = 1; i <= n; i++) fact *= i;
+	printf("%d! = %d\n", n, fact);
+
 	return 0;
 }
