@@ -15,6 +15,15 @@ int main(void) {
 		}
 		printf("\n");
 	}
+	printf("\n");
 
+	printf("[Right triangle]\n");		// fail
+	for (int j = 0; j < y; j++) {
+		for (int i = 0; (i < (j+1)) && (i < x); i++) {
+			printf("* ");
+		}
+		printf("\n");
+	}
+	printf("\n");
 	return 0;
 }
