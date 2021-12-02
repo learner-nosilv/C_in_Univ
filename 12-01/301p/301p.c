@@ -8,11 +8,13 @@ int main(void) {
 	printf("\t\t\t* 'Q' 입력시 종료됩니다.\n\n");
 	while (1) {
 		printf("소문자 입력: ");
-		scanf("%c", &letter);
-		if (letter == 'Q')
+		scanf(" %c", &letter);		// ** except space, tap, enter
+
+		if (letter == 'Q') {
 			break;
+		}
 		else if ('a' <= letter && letter <= 'z') {
-			printf("%c → %c\n", letter, letter - 32);
+			printf("%c → %c\n\n", letter, letter-32);
 			continue;
 		}
 		else {
