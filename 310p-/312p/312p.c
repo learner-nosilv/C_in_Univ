@@ -1,18 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <Windows.h>
 
-int main() {
-	
-	int i;
-	for (i = 10; i >= 0; i--) {
-		printf("%d\n", i);
-	}
+int main(void) {
 
-	int x = 10;
-	while (x >= 0) {
-		printf("%d\n", x);
-		x--;
-	}
-	
-	return 0;
+	int result = 0;
+	for (int i = 10; i < 31; i++)
+		for (int j = 0; j < 6; j++)
+			result += i + j;
+	printf("Result: %d\n", result);
+
 }
