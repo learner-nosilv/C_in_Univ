@@ -14,19 +14,19 @@ int main(void) {
 	printf("How many times? _\b");
 	scanf("%d", &toss);
 
-	for (; toss > 0; toss--) {
+	for (int i = 0; i < toss; i++) {
 		switch (coin_toss()) {
-			case 0: 
+			case 0:
 				heads++;
 				break;
-			case 1: 
+			case 1:
 				tails++;
 				break;
 		}
 	}
 
 	printf("[Result]\n");
-	printf("Heads: %d(%lf%%)\nTails: %d(%lf%%)\n\n", ); 
+	printf("Heads: %d(%.2lf%%)\nTails: %d(%.2lf%%)\n\n", heads, 100.0 * heads / toss, tails, 100.0 * tails / toss);
 	return 0;
 }
 
