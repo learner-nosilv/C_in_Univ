@@ -9,8 +9,12 @@ double add(double a, double b);
 double sub(double a, double b);
 double mul(double a, double b);
 double div(double a, double b);
+float get_area(radius, pi) {
+	return radius * radius * pi;
+}
 
 int main(void) {
+	printf("%lf", get_area(1, 2));
 	double y, x=1, a=1;
 //	y = log10(x) + exp(x);
 	y = sin(x) + sqrt(x * x - 2 * a) + ldexp(1.0, 10);
